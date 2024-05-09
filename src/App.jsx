@@ -2,6 +2,7 @@ import "./sass/index.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { useState } from "react";
+import My from "./components/My";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -10,10 +11,10 @@ function App() {
   };
   return (
     <div data-theme={theme} className="app-container">
-      <Header changeTheme={changeTheme} currentTheme={theme}/>
-      <div>
-        <h2>Teste</h2>
-      </div>
+      <Header changeTheme={changeTheme} currentTheme={theme} />
+      <main>
+        <My />
+      </main>
       <Footer />
     </div>
   );

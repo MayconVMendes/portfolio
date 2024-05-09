@@ -20,6 +20,21 @@
   --accent-color2: #eeeeee;
   --accent-color3: #777777;
   --card-color: #eeeeee;
+  --header: #fff;
+  --header-color: #21473c;
+  --header-colorTitle: #1d4eb0;
+  --header-colorHover: #1d4eb0;
+  --header-shadowColor: rgba(0, 0, 0, 0.05);
+  --footer: #c3c3c3;
+}
+
+[data-theme="dark"] {
+  --header: #0b0d0e;
+  --header-color: #ddd;
+  --header-colorTitle: #1d4eb0;
+  --header-colorHover: #1d4eb0;
+  --header-shadowColor: rgba(255, 255, 255, 0.09);
+  --footer: #c3c3c3;
 }
 
 * {
@@ -32,12 +47,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
 .app-container {
   background-color: var(--background);
   font-family: var(--font-family);
-  overflow-x: hidden;
-  transition: 0.5s ease-in-out;
-  padding: 2rem 4rem;
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     padding: 0;
   }
