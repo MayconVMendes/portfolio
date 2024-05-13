@@ -1,13 +1,73 @@
 footer {
-  background-color: var(--footer);
   width: 100%;
-  height: 250px;
+  height: 120px;
   padding: 10px 15px;
-  display: grid;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--brColor);
+  color: var(--textColor);
+  background-color: var(--footer);
+  display: flex;
+  justify-content: center;
+
+  .foo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include desktopview {
+      max-width: 1200px;
+    }
+
+    .info {
+      display: flex;
+
+      p {
+        font-size: 20px;
+
+        a {
+          text-decoration: none;
+          color: var(--header-colorTitle);
+          font-weight: bold;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: "";
+            background: var(--header-colorHover);
+            width: 0px;
+            height: 2px;
+            bottom: -3px;
+            transition: all 0.8s;
+          }
+
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+      font-size: 20px;
+      cursor: pointer;
+
+      svg {
+        &:hover {
+          color: var(--header-colorHover);
+        }
+      }
+    }
+  }
 
   .boxBottom {
     justify-content: center;
     display: flex;
     align-items: end;
+    margin-left: 8px;
   }
 }

@@ -1,8 +1,8 @@
-import "./sass/index.scss";
+import { useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { useState } from "react";
-import My from "./components/My";
+import { Outlet } from "react-router-dom";
+import "./sass/index.scss";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -12,8 +12,8 @@ function App() {
   return (
     <div data-theme={theme} className="app-container">
       <Header changeTheme={changeTheme} currentTheme={theme} />
-      <main>
-        <My />
+      <main className="content">
+        <Outlet />
       </main>
       <Footer />
     </div>

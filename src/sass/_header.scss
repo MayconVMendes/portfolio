@@ -1,79 +1,95 @@
 header {
   background-color: var(--header);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 5px 15px;
   height: 90px;
   align-items: center;
   box-shadow: 0 3px 9px var(--header-shadowColor);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
-  .titles a {
-    color: var(--header-colorTitle);
-    font-weight: bold;
+  .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-decoration: none;
+    width: 100%;
 
-    h2 {
-      font-size: 32px;
+    @include desktopview {
+      max-width: 1200px;
     }
 
-    img {
-      width: 45px;
+    .titles a {
+      color: var(--header-colorTitle);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      h2 {
+        font-size: 32px;
+      }
+
+      img {
+        width: 45px;
+      }
     }
-  }
 
-  .mode {
-    display: flex;
-    justify-content: end;
+    .mode {
+      display: flex;
+      justify-content: end;
+      cursor: pointer;
 
-    svg {
-      font-size: 20px;
-    }
+      svg {
+        font-size: 20px;
+      }
 
-    .light {
-      color: var(--header-color);
-    }
-
-    .dark {
-      color: var(--header-color);
-    }
-  }
-
-  .links {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-
-    li {
-      display: block;
-      padding: 0 10px;
-
-      a {
-        text-decoration: none;
+      .light {
         color: var(--header-color);
-        font-weight: 500;
-        font-size: 1.2rem;
-        position: relative;
-        text-transform: capitalize;
-        transition: all 0.5s ease;
+      }
 
-        &::before {
-          position: absolute;
-          content: "";
-          background: var(--header-colorHover);
-          width: 0px;
-          height: 2px;
-          bottom: -3px;
-          transition: all 0.5s;
-        }
+      .dark {
+        color: var(--header-color);
+      }
+    }
 
-        &:hover {
-          color: var(--header-colorHover);
+    .links {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      li {
+        display: block;
+        padding: 0 10px;
+
+        a {
+          text-decoration: none;
+          color: var(--header-color);
           font-weight: 500;
+          font-size: 1.2rem;
+          position: relative;
+          text-transform: capitalize;
+          transition: all 0.5s ease;
 
           &::before {
-            width: 100%;
+            position: absolute;
+            content: "";
+            background: var(--header-colorHover);
+            width: 0px;
+            height: 2px;
+            bottom: -3px;
+            transition: all 0.5s;
+          }
+
+          &:hover {
+            color: var(--header-colorHover);
+            font-weight: 500;
+
+            &::before {
+              width: 100%;
+            }
           }
         }
       }
