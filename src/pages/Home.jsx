@@ -30,17 +30,30 @@ function Home() {
         </div>
       </div>
       <div className="iAm">
-        <div className="boxImg"></div>
         <div className="boxInfo">
           <p className="who">Quem eu sou?</p>
-          <h2>
+          <p className="mv">
             Meu nome é <strong>Maycon Vieira Mendes</strong>, sou desenvolvedor,
             design, analista e engenheiro
-          </h2>
-          <p>
-            Muito prazer! Sou formado em Analise e Desenvolvimento de Sistemas
-            (ADS), gosto muito da área da tecnologia
           </p>
+          <p className="text">
+            Muito prazer! Sou formado em Análise e Desenvolvimento de Sistemas
+            (ADS), amo aquilo que escolhi fazer, transformar sonhos em realidade
+            através da técnologia e do desenvolvimento. <br />
+            Já atuei como Dev front-end, back-end e full stack.
+          </p>
+        </div>
+        <div className="boxImg"></div>
+      </div>
+      <div className="qualifications">
+        <div className="boxImg"></div>
+        <div className="boxInfo">
+          <p className="who">Minhas formações acadêmicas</p>
+          <p className="mv">
+            Meu nome é <strong>Maycon Vieira Mendes</strong>, sou desenvolvedor,
+            design, analista e engenheiro
+          </p>
+          <p className="text">test</p>
         </div>
       </div>
     </div>

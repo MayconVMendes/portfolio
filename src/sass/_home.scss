@@ -5,7 +5,6 @@
   justify-content: center;
   .myPerson {
     width: 100%;
-    height: 600px;
     padding: 10px 15px;
     display: flex;
     align-items: center;
@@ -86,7 +85,7 @@
 
       .name {
         font-size: 30px;
-        color: var(--textColor);
+        color: var(--h2);
         strong {
           color: var(--header-colorTitle);
         }
@@ -94,7 +93,7 @@
 
       .area {
         font-size: 20px;
-        color: #696969;
+        color: var(--pColor);
       }
 
       .links {
@@ -114,6 +113,45 @@
             background-color: var(--btnBgHover);
           }
         }
+      }
+    }
+  }
+
+  .iAm,
+  .qualifications {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include desktopview {
+      max-width: 1200px;
+    }
+    .boxImg {
+      width: 40%;
+      height: 450px;
+      display: block;
+      background-color: #fff;
+    }
+    .boxInfo {
+      width: 60%;
+
+      .who {
+        font-size: 22px;
+        color: #89a29f;
+        font-weight: 600;
+      }
+
+      .mv {
+        font-size: 30px;
+        color: var(--h2);
+        strong {
+          color: var(--header-colorTitle);
+        }
+      }
+
+      .text {
+        font-size: 20px;
+        color: var(--pColor);
       }
     }
   }

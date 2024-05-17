@@ -1,5 +1,9 @@
 @import "base/base";
 
-@import "_header";
-@import "_footer";
+//Components
+@import "./components/header";
+@import "./components/_footer";
+@import "./components/hamburger";
+
+//Pages
 @import "_home";

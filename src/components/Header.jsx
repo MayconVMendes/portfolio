@@ -1,8 +1,11 @@
 import { ImSun } from "react-icons/im";
 import { BsFillMoonFill } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 import Icon from "../assets/student.png";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { stack as Menu } from "react-burger-menu";
 
 Header.propTypes = {
   changeTheme: PropTypes.func.isRequired,
@@ -45,6 +48,25 @@ function Header({ changeTheme, currentTheme }) {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="menu">
+        <Menu
+          right
+          width="300px"
+          customBurgerIcon={<GiHamburgerMenu />}
+          customCrossIcon={<IoClose />}
+        >
+          <Link to="/">Inicio</Link>
+          <Link to="/">Sobre</Link>
+          <Link to="/projetos">Projetos</Link>
+          <div className="mode" onClick={changeTheme}>
+            {currentTheme === "dark" ? (
+              <ImSun className="light" />
+            ) : (
+              <BsFillMoonFill className="dark" />
+            )}
+          </div>
+        </Menu>
       </div>
     </header>
   );
