@@ -10,10 +10,6 @@
     align-items: center;
     justify-content: space-evenly;
 
-    @include desktopview {
-      max-width: 1200px;
-    }
-
     .animation {
       width: 400px;
 
@@ -123,9 +119,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    @include desktopview {
-      max-width: 1200px;
-    }
     .boxImg {
       width: 40%;
       height: 450px;
@@ -153,6 +146,65 @@
         font-size: 20px;
         color: var(--pColor);
       }
+    }
+  }
+}
+
+@include mobileview {
+  .welcome {
+    .myPerson {
+      display: grid;
+
+      .animation {
+        width: auto;
+      }
+
+      .informations {
+        .hellou,
+        .area {
+          font-size: 16px;
+        }
+
+        .name {
+          font-size: 24px;
+        }
+      }
+    }
+    .iAm,
+    .qualifications {
+      display: grid;
+      padding: 10px 15px;
+
+      .boxImg,
+      .boxInfo {
+        width: 100%;
+      }
+
+      .boxInfo {
+        .who,
+        .text {
+          font-size: 16px;
+        }
+
+        .mv {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .qualifications {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@include desktopview {
+  .welcome {
+    .myPerson,
+    .iAm,
+    .qualifications {
+      max-width: 1200px;
     }
   }
 }

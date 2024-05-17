@@ -15,9 +15,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include desktopview {
-      max-width: 1200px;
-    }
 
     .info {
       display: flex;
@@ -69,5 +66,43 @@ footer {
     display: flex;
     align-items: end;
     margin-left: 8px;
+  }
+}
+
+@include mobileview {
+  footer {
+    .foo {
+      display: grid;
+      justify-content: center;
+      gap: 10px;
+      .info {
+        display: grid;
+        gap: 5px;
+
+        p {
+          font-size: 15px;
+
+          a {
+            position: unset;
+          }
+        }
+
+        .boxBottom {
+          margin: 0;
+        }
+      }
+
+      .icons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include desktopview {
+  footer {
+    .foo {
+      max-width: 1200px;
+    }
   }
 }
