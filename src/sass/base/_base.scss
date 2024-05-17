@@ -1,25 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --orange: #ff8139;
-  --pink: #ff3998;
-  --green: #39ffa0;
-  --red: #ff3939;
-  --light-green: #edfff6;
-  --light-orange: #fff0e8;
-  --accent-color1: #ffffff;
-  --accent-color2: #555555;
-  --accent-color3: #cccccc;
-  --card-color: #000000;
-  --background: #111111;
-  --font-family: "Inter", sans-serif;
+  --blue: #1d4eb0;
+  --font-family: "Poppins", sans-serif;
 }
 
 [data-theme="light"] {
-  --background: #ffffff;
-  --accent-color1: #000000;
-  --accent-color2: #eeeeee;
-  --accent-color3: #777777;
+  --bg1: #1d4eb015;
   --card-color: #eeeeee;
+  --header: #fff;
+  --header-color: #21473c;
+  --header-colorTitle: #1d4eb0;
+  --header-colorHover: #1d4eb0;
+  --header-shadowColor: rgba(0, 0, 0, 0.05);
+  --footer: #fff;
+  --h2: #0b0d0e;
+  --pColor: #696969;
+  --brColor: #ddd;
+  --btnBg: #1d4eb0;
+  --btnBgHover: #012e88;
+}
+
+[data-theme="dark"] {
+  --bg1: #111;
+  --header: #0b0d0e;
+  --header-color: #ddd;
+  --header-colorTitle: #1d4eb0;
+  --header-colorHover: #1d4eb0;
+  --header-shadowColor: rgba(255, 255, 255, 0.09);
+  --footer: #0b0d0e;
+  --h2: #ddd;
+  --pColor: #696969;
+  --brColor: #333;
+  --btnBgHover: #012e88;
 }
 
 * {
@@ -32,28 +44,55 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  margin-top: 90px;
+  padding-top: 20px;
+}
+
 .app-container {
-  background-color: var(--background);
+  background-color: var(--bg1);
   font-family: var(--font-family);
-  overflow-x: hidden;
-  transition: 0.5s ease-in-out;
-  padding: 2rem 4rem;
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     padding: 0;
   }
 }
 
-@media only screen and (min-device-width: 280px) and (max-device-width: 1080px) {
-  .app-container::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 ::-webkit-scrollbar {
-  background-color: #111111;
-  width: 0.2rem;
+  background-color: #fff;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--orange);
+  background-color: var(--blue);
+  border-radius: 5px;
+}
+
+//Resolutions
+@mixin mobileview {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tabletview {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin notebookview {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktopview {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
 }

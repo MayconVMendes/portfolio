@@ -1,0 +1,161 @@
+header {
+  background-color: var(--header);
+  display: flex;
+  justify-content: center;
+  padding: 5px 15px;
+  height: 90px;
+  align-items: center;
+  box-shadow: 0 3px 9px var(--header-shadowColor);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .titles a {
+      color: var(--header-colorTitle);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      &::before {
+        display: none;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      img {
+        width: 45px;
+      }
+    }
+
+    .mode {
+      display: flex;
+      justify-content: end;
+      cursor: pointer;
+
+      svg {
+        font-size: 20px;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      li {
+        display: block;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--header-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: var(--header-colorHover);
+      width: 0px;
+      height: 2px;
+      bottom: -3px;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      color: var(--header-colorHover);
+      font-weight: 500;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  .light,
+  .dark {
+    color: var(--header-color);
+  }
+
+  .bm-overlay {
+    left: 0;
+    top: 0;
+    background: unset;
+  }
+
+  .bm-menu-wrap {
+    top: 0;
+    padding: 30px;
+    background-color: #c3c3c3;
+  }
+
+  .bm-burger-button {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+  }
+}
+
+@include mobileview {
+  header {
+    .container {
+      .titles a {
+        h2 {
+          font-size: 25px;
+        }
+      }
+
+      .mode {
+        justify-content: left;
+      }
+
+      .links {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: block;
+
+      .bm-icon {
+        color: var(--header-color);
+      }
+
+      #react-burger-menu-btn {
+        max-width: 42px;
+        max-height: 42px;
+        left: unset !important;
+        right: 10px;
+        top: 23px !important;
+      }
+    }
+  }
+}
+
+@include desktopview {
+  header {
+    .container {
+      max-width: 1200px;
+    }
+  }
+}
