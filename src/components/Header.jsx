@@ -6,6 +6,7 @@ import Icon from "../assets/student.png";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { stack as Menu } from "react-burger-menu";
+import { useState } from "react";
 
 Header.propTypes = {
   changeTheme: PropTypes.func.isRequired,
@@ -13,6 +14,15 @@ Header.propTypes = {
 };
 
 function Header({ changeTheme, currentTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleStateChange = (state) => {
+    setMenuOpen(state.isOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
   return (
     <header>
       <div className="container">
@@ -53,13 +63,30 @@ function Header({ changeTheme, currentTheme }) {
         <Menu
           right
           width="300px"
+          isOpen={menuOpen}
+          onStateChange={handleStateChange}
           customBurgerIcon={<GiHamburgerMenu />}
           customCrossIcon={<IoClose />}
         >
-          <Link to="/">Inicio</Link>
-          <Link to="/">Sobre</Link>
-          <Link to="/projetos">Projetos</Link>
-          <div className="mode" onClick={changeTheme}>
+          <Link to="/" onClick={closeMenu}>
+            Inicio
+          </Link>
+          <Link to="/" onClick={closeMenu}>
+            Sobre
+          </Link>
+          <Link to="/projetos" onClick={closeMenu}>
+            Projetos
+          </Link>
+          <Link to="/" onClick={closeMenu}>
+            Cursos
+          </Link>
+          <div
+            className="mode"
+            onClick={() => {
+              changeTheme();
+              closeMenu();
+            }}
+          >
             {currentTheme === "dark" ? (
               <ImSun className="light" />
             ) : (
