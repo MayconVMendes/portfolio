@@ -1,12 +1,9 @@
 import { ImSun } from "react-icons/im";
 import { BsFillMoonFill } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoClose } from "react-icons/io5";
 import Icon from "../assets/student.png";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { stack as Menu } from "react-burger-menu";
-import { useState } from "react";
+import Hamburger from "./Hamburger";
 
 Header.propTypes = {
   changeTheme: PropTypes.func.isRequired,
@@ -14,15 +11,6 @@ Header.propTypes = {
 };
 
 function Header({ changeTheme, currentTheme }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleStateChange = (state) => {
-    setMenuOpen(state.isOpen);
-  };
-
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
   return (
     <header>
       <div className="container">
@@ -46,6 +34,9 @@ function Header({ changeTheme, currentTheme }) {
             <li>
               <Link to="/">Cursos</Link>
             </li>
+            <li>
+              <Link to="/contato">Contato</Link>
+            </li>
 
             <li>
               <div className="mode" onClick={changeTheme}>
@@ -60,40 +51,7 @@ function Header({ changeTheme, currentTheme }) {
         </div>
       </div>
       <div className="menu">
-        <Menu
-          right
-          width="300px"
-          isOpen={menuOpen}
-          onStateChange={handleStateChange}
-          customBurgerIcon={<GiHamburgerMenu />}
-          customCrossIcon={<IoClose />}
-        >
-          <Link to="/" onClick={closeMenu}>
-            Inicio
-          </Link>
-          <Link to="/" onClick={closeMenu}>
-            Sobre
-          </Link>
-          <Link to="/projetos" onClick={closeMenu}>
-            Projetos
-          </Link>
-          <Link to="/" onClick={closeMenu}>
-            Cursos
-          </Link>
-          <div
-            className="mode"
-            onClick={() => {
-              changeTheme();
-              closeMenu();
-            }}
-          >
-            {currentTheme === "dark" ? (
-              <ImSun className="light" />
-            ) : (
-              <BsFillMoonFill className="dark" />
-            )}
-          </div>
-        </Menu>
+        <Hamburger currentTheme={currentTheme} changeTheme={changeTheme} />
       </div>
     </header>
   );
