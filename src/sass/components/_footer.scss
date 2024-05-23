@@ -5,7 +5,6 @@ footer {
   display: flex;
   align-items: center;
   border-top: 1px solid var(--brColor);
-  color: var(--h2);
   background-color: var(--footer);
   display: flex;
   justify-content: center;
@@ -21,6 +20,8 @@ footer {
 
       p {
         font-size: 20px;
+        color: var(--h2);
+        font-weight: 600;
 
         a {
           text-decoration: none;
