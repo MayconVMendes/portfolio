@@ -151,7 +151,7 @@
     margin-bottom: 50px;
     display: grid;
     text-align: center;
-    gap: 55px;
+    gap: 30px;
 
     h2 {
       color: var(--header-colorTitle);
@@ -274,8 +274,7 @@
         }
       }
     }
-    .iAm,
-    .qualifications {
+    .iAm {
       display: grid;
       padding: 10px 15px;
 
@@ -296,14 +295,30 @@
       }
     }
 
-    .qualifications {
-      display: flex;
-      flex-direction: column-reverse;
+    .tools {
+      padding: 10px 15px;
+      gap: 25px;
     }
   }
+}
 
-  .tools {
-    padding: 10px 15px;
+@include tabletview {
+  .welcome {
+    .myPerson,
+    .iAm,
+    .tools {
+      max-width: 740px;
+    }
+  }
+}
+
+@include notebookview {
+  .welcome {
+    .myPerson,
+    .iAm,
+    .tools {
+      max-width: 960px;
+    }
   }
 }
 
@@ -311,7 +326,7 @@
   .welcome {
     .myPerson,
     .iAm,
-    .qualifications {
+    .tools {
       max-width: 1200px;
     }
   }

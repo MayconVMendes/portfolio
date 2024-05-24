@@ -80,36 +80,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="qualifications">
-        <div className="boxImg"></div>
-        <div className="boxInfo">
-          <p className="who">Minhas formações acadêmicas</p>
-          <div className="institution">
-            <div className="fatec"></div>
-            <div className="etec">
-              <div className="desc">
-                <p className="inf">Ensino técnico:</p>
-                <p className="course">Análise e Desenvolvimento de Sistemas</p>
-              </div>
-              <div className="desc">
-                <p className="inf">Instituição:</p>
-                <Link
-                  target="_blank"
-                  to="https://www.etecpg.com.br/"
-                  className="data"
-                >
-                  Etec de Praia Grande-SP
-                </Link>
-              </div>
-              <div className="desc">
-                <p className="inf">Período:</p>
-                <p className="data">2019 - 2020 (1 ano e 6 meses)</p>
-              </div>
-            </div>
-          </div>
-          <p className="text">test</p>
-        </div>
-      </div>
     </div>
   );
 }
