@@ -18,10 +18,11 @@
   --brColor: #ddd;
   --btnBg: #1d4eb0;
   --btnBgHover: #012e88;
+  --bgMenuMobile: #fbfbfe;
 }
 
 [data-theme="dark"] {
-  --bg1: #111;
+  --bg1: #010104;
   --header: #0b0d0e;
   --header-color: #ddd;
   --header-colorTitle: #1d4eb0;
@@ -32,6 +33,7 @@
   --pColor: #696969;
   --brColor: #333;
   --btnBgHover: #012e88;
+  --bgMenuMobile: #5081e2;
 }
 
 * {
