@@ -6,11 +6,10 @@
 
 [data-theme="light"] {
   --bg1: #1d4eb015;
-  --card-color: #eeeeee;
   --header: #fff;
-  --header-color: #21473c;
-  --header-colorTitle: #1d4eb0;
-  --header-colorHover: #1d4eb0;
+  --headerTxtColor: #21473c;
+  --headerTxtColorTitle: #1d4eb0;
+  --headerTxtColorHover: #1d4eb0;
   --header-shadowColor: rgba(0, 0, 0, 0.05);
   --footer: #fff;
   --h2: #0b0d0e;
@@ -22,11 +21,11 @@
 }
 
 [data-theme="dark"] {
-  --bg1: #010104;
+  --bg1: #020011;
   --header: #0b0d0e;
-  --header-color: #ddd;
-  --header-colorTitle: #1d4eb0;
-  --header-colorHover: #1d4eb0;
+  --headerTxtColor: #ddd;
+  --headerTxtColorTitle: #1d4eb0;
+  --headerTxtColorHover: #1d4eb0;
   --header-shadowColor: rgba(255, 255, 255, 0.09);
   --footer: #0b0d0e;
   --h2: #ddd;

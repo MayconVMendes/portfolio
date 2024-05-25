@@ -6,6 +6,7 @@ import React from "../assets/react.png";
 import Magento from "../assets/magento.png";
 import ND from "../assets/node.png";
 import Vue from "../assets/vue.png";
+import MyCard from "../components/MyCard";
 
 function Home() {
   return (
@@ -78,6 +79,36 @@ function Home() {
             <img src={ND} />
             <div className="tooltiptext">Node</div>
           </div>
+        </div>
+      </div>
+      <div className="formation">
+        <h2>Minhas formações</h2>
+        <div className="infos">
+          <a
+            href="https://www.fatecpg.edu.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MyCard
+              title="Ensino Superior"
+              name="Análise e Desenvolvimento de Sistemas"
+              data="2020 - 2023 (3 anos)"
+              institutes="Fatec de Praia Grande"
+            />
+          </a>
+
+          <a
+            href="https://www.etecpg.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MyCard
+              title="Ensino Técnico"
+              name="Análise e Desenvolvimento de Sistemas"
+              data="2019 - 2020 (1 ano e 6 meses)"
+              institutes="Etec de Praia Grande"
+            />
+          </a>
         </div>
       </div>
     </div>
