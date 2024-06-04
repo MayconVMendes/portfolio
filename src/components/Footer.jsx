@@ -17,8 +17,20 @@ function Footer() {
           </div>
         </div>
         <div className="icons">
-          <FaLinkedinIn />
-          <FaGithub />
+          <a
+            href="https://www.linkedin.com/in/maycon-vieira77/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            href="https://github.com/MayconVMendes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
         </div>
       </div>
     </footer>
