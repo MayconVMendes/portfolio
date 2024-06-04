@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
 import "./sass/index.scss";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -11,6 +12,7 @@ function App() {
   };
   return (
     <div data-theme={theme} className="app-container">
+      <ScrollToTop />
       <Header changeTheme={changeTheme} currentTheme={theme} />
       <main className="content">
         <Outlet />
