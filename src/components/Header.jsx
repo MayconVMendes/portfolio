@@ -5,11 +5,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 
-Header.propTypes = {
-  changeTheme: PropTypes.func.isRequired,
-  currentTheme: PropTypes.string.isRequired,
-};
-
 function Header({ changeTheme, currentTheme }) {
   return (
     <header>
@@ -56,5 +51,10 @@ function Header({ changeTheme, currentTheme }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  changeTheme: PropTypes.func.isRequired,
+  currentTheme: PropTypes.string.isRequired,
+};
 
 export default Header;

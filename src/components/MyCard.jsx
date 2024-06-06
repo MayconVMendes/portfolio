@@ -1,12 +1,5 @@
 import PropTypes from "prop-types";
 
-MyCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
-  institutes: PropTypes.string.isRequired,
-};
-
 function MyCard({ title, name, data, institutes }) {
   return (
     <div className="card">
@@ -25,5 +18,12 @@ function MyCard({ title, name, data, institutes }) {
     </div>
   );
 }
+
+MyCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  data: PropTypes.string.isRequired,
+  institutes: PropTypes.string.isRequired,
+};
 
 export default MyCard;

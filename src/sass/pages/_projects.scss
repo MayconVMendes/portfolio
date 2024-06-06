@@ -1,0 +1,53 @@
+.projects {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  .box {
+    h2 {
+      color: var(--headerTxtColorTitle);
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .pro {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@include mobileview {
+  .projects {
+    .box {
+      .pro {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include tabletview {
+  .projects {
+    .box {
+      max-width: 740px;
+    }
+  }
+}
+
+@include notebookview {
+  .projects {
+    .box {
+      max-width: 960px;
+    }
+  }
+}
+
+@include desktopview {
+  .projects {
+    .box {
+      max-width: 1200px;
+    }
+  }
+}
