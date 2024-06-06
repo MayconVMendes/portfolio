@@ -7,11 +7,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-Hamburger.propTypes = {
-  currentTheme: PropTypes.string.isRequired,
-  changeTheme: PropTypes.func.isRequired,
-};
-
 function Hamburger({ currentTheme, changeTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,6 +17,7 @@ function Hamburger({ currentTheme, changeTheme }) {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
   return (
     <>
       <Menu
@@ -64,5 +60,10 @@ function Hamburger({ currentTheme, changeTheme }) {
     </>
   );
 }
+
+Hamburger.propTypes = {
+  currentTheme: PropTypes.string.isRequired,
+  changeTheme: PropTypes.func.isRequired,
+};
 
 export default Hamburger;
