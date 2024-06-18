@@ -1,12 +1,30 @@
 import MyPhoto from "../assets/my.jpg";
 import { Link } from "react-router-dom";
-import JS from "../assets/js.png";
-import TS from "../assets/ts.png";
-import React from "../assets/react.png";
-import Magento from "../assets/magento.png";
-import ND from "../assets/node.png";
-import Vue from "../assets/vue.png";
+import JS from "../assets/home/js.png";
+import TS from "../assets/home/ts.png";
+import React from "../assets/home/react.png";
+import MG from "../assets/home/magento.png";
+import ND from "../assets/home/node.png";
+import Vue from "../assets/home/vue.png";
+import Php from "../assets/home/php.png";
+import Sass from "../assets/home/sass.svg";
+import Less from "../assets/home/less.svg";
+import Tailwindcss from "../assets/home/tailwindcss.svg";
+import Styledcomponents from "../assets/home/styledcomponents.svg";
+import Java from "../assets/home/java.svg";
+import Kotlin from "../assets/home/kotlin.svg";
+import Graph from "../assets/home/graph.svg";
+import VSC from "../assets/home/vsc.svg";
+import Postman from "../assets/home/postman.svg";
+import Mysqlwork from "../assets/home/mysqlwork.svg";
+import Androidstudio from "../assets/home/androidstudio.svg";
+import Expo from "../assets/home/expo.svg";
+import Figma from "../assets/home/figma.svg";
+import Canva from "../assets/home/canva.svg";
+import Netbeans from "../assets/home/netbeans.svg";
+import CorelDRAW from "../assets/home/coreldraw.svg";
 import MyCard from "../components/MyCard";
+import CardTooltip from "../components/CardTooltip";
 
 function Home() {
   return (
@@ -53,63 +71,113 @@ function Home() {
         <div className="boxImg"></div>
       </div>
       <div className="tools">
+        <h2 className="who">Algumas ferramentas que eu utlizo</h2>
+        <div className="imgs">
+          <CardTooltip
+            image={VSC}
+            alt="Icone do Visual Studio Code"
+            tooltip="Visual Studio Code"
+          />
+          <CardTooltip
+            image={Postman}
+            alt="Icone do Postman"
+            tooltip="Postman"
+          />
+          <CardTooltip
+            image={Mysqlwork}
+            alt="Icone do MySQL Workbench"
+            tooltip="MySQL Workbench"
+          />
+          <CardTooltip
+            image={Androidstudio}
+            alt="Icone do Android Studio"
+            tooltip="Android Studio"
+          />
+          <CardTooltip image={Expo} alt="Icone do Expo" tooltip="Expo" />
+          <CardTooltip image={Figma} alt="Icone do Figma" tooltip="Figma" />
+          <CardTooltip image={Canva} alt="Icone do Canva" tooltip="Canva" />
+          <CardTooltip
+            image={Netbeans}
+            alt="Icone do Netbeans"
+            tooltip="Netbeans"
+          />
+          <CardTooltip
+            image={CorelDRAW}
+            alt="Icone do CorelDRAW"
+            classImg="corel"
+            tooltip="CorelDRAW"
+          />
+        </div>
+      </div>
+      <div className="technology">
         <h2 className="who">Algumas técnologias que eu trabalho</h2>
         <div className="imgs">
-          <div className="tooltip">
-            <img src={JS} />
-            <div className="tooltiptext">JavaScript</div>
-          </div>
-          <div className="tooltip">
-            <img src={TS} />
-            <div className="tooltiptext">TypeScript</div>
-          </div>
-          <div className="tooltip">
-            <img className="react" src={React} />
-            <div className="tooltiptext">React</div>
-          </div>
-          <div className="tooltip">
-            <img className="magento" src={Magento} />
-            <div className="tooltiptext">Magento</div>
-          </div>
-          <div className="tooltip">
-            <img src={Vue} />
-            <div className="tooltiptext">Vue</div>
-          </div>
-          <div className="tooltip">
-            <img src={ND} />
-            <div className="tooltiptext">Node</div>
-          </div>
+          <CardTooltip
+            image={JS}
+            alt="Icone do JavaScript"
+            tooltip="JavaScript"
+          />
+          <CardTooltip
+            image={TS}
+            alt="Icone do TypeScript"
+            tooltip="TypeScript"
+          />
+          <CardTooltip
+            image={React}
+            alt="Icone do React"
+            classImg="react"
+            tooltip="React, React Native"
+          />
+          <CardTooltip
+            image={MG}
+            alt="Icone do Magento"
+            classImg="magento"
+            tooltip="Magento 1.x, 2.x"
+          />
+          <CardTooltip image={Vue} alt="Icone do Vue" tooltip="Vue" />
+          <CardTooltip image={ND} alt="Icone do Node" tooltip="Node" />
+          <CardTooltip image={Php} alt="Icone do PHP" tooltip="PHP" />
+          <CardTooltip image={Sass} alt="Icone do Sass" tooltip="Sass" />
+          <CardTooltip image={Less} alt="Icone do Less" tooltip="Less" />
+          <CardTooltip
+            image={Tailwindcss}
+            alt="Icone do Tailwind CSS"
+            tooltip="Tailwind CSS"
+          />
+          <CardTooltip
+            image={Styledcomponents}
+            alt="Icone do Styled components"
+            tooltip="Styled components"
+          />
+          <CardTooltip image={Java} alt="Icone do Java" tooltip="Java" />
+          <CardTooltip image={Kotlin} alt="Icone do Kotlin" tooltip="Kotlin" />
+          <CardTooltip image={Graph} alt="Icone do GraphQL" tooltip="GraphQL" />
         </div>
       </div>
       <div className="formation">
         <h2>Minhas formações</h2>
         <div className="infos">
-          <a
-            href="https://www.fatecpg.edu.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MyCard
-              title="Ensino Superior"
-              name="Análise e Desenvolvimento de Sistemas"
-              data="2020 - 2023 (3 anos)"
-              institutes="Fatec de Praia Grande"
-            />
-          </a>
+          <MyCard
+            link="https://www.fatecpg.edu.br/"
+            title="Ensino Superior"
+            name="Análise e Desenvolvimento de Sistemas"
+            data="2020 - 2023 (3 anos)"
+            institutes="Fatec de Praia Grande"
+          />
 
-          <a
-            href="https://www.etecpg.com.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MyCard
-              title="Ensino Técnico"
-              name="Análise e Desenvolvimento de Sistemas"
-              data="2019 - 2020 (1 ano e 6 meses)"
-              institutes="Etec de Praia Grande"
-            />
-          </a>
+          <MyCard
+            link="https://www.etecpg.com.br/"
+            title="Ensino Técnico"
+            name="Análise e Desenvolvimento de Sistemas"
+            data="2019 - 2020 (1 ano e 6 meses)"
+            institutes="Etec de Praia Grande"
+          />
         </div>
+      </div>
+      <div className="experience">
+        <h2>Minhas experiências </h2>
+
+        <div className="infos"></div>
       </div>
     </div>
   );

@@ -1,25 +1,28 @@
 import PropTypes from "prop-types";
 
-function MyCard({ title, name, data, institutes }) {
+function MyCard({ link, title, name, data, institutes }) {
   return (
-    <div className="card">
-      <h2>{title}</h2>
-      <div className="box">
-        <p className="name">
-          <strong>Curso:</strong> {name}
-        </p>
-        <p className="data">
-          <strong>Período:</strong> {data}
-        </p>
-        <p className="inst">
-          <strong>Instituição:</strong> {institutes}
-        </p>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <div className="card">
+        <h2>{title}</h2>
+        <div className="box">
+          <p className="name">
+            <strong>Curso:</strong> {name}
+          </p>
+          <p className="data">
+            <strong>Período:</strong> {data}
+          </p>
+          <p className="inst">
+            <strong>Instituição:</strong> {institutes}
+          </p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 }
 
 MyCard.propTypes = {
+  link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
