@@ -305,7 +305,8 @@
       padding: 10px 15px;
       gap: 25px;
     }
-    .formation {
+    .formation,
+    .experience {
       padding: 10px 15px;
       .infos {
         display: grid;
@@ -320,7 +321,9 @@
     .iAm,
     .technology,
     .formation,
-    .tools {
+    .tools,
+    .experience {
+      padding: 10px 15px;
       max-width: 740px;
     }
   }
@@ -332,7 +335,8 @@
     .iAm,
     .technology,
     .formation,
-    .tools {
+    .tools,
+    .experience {
       max-width: 960px;
     }
   }
@@ -344,7 +348,8 @@
     .iAm,
     .technology,
     .formation,
-    .tools {
+    .tools,
+    .experience {
       max-width: 1200px;
     }
   }
