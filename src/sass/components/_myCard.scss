@@ -11,14 +11,37 @@
   transition: all 0.5s;
   padding: 20px 15px;
 
-  h2 {
+  .imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 15px;
+    .bis2bis {
+      width: 25px;
+    }
+    .wbj {
+      width: 45px;
+      margin-right: -10px;
+    }
+    .edu {
+      width: 55px;
+    }
   }
 
   .box {
     display: grid;
     align-items: center;
     justify-content: center;
+    gap: 6px;
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      border: 1px solid #c1c1c1;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
   }
 
   p {

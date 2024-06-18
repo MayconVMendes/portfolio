@@ -7,6 +7,9 @@ import MG from "../assets/home/magento.png";
 import ND from "../assets/home/node.png";
 import Vue from "../assets/home/vue.png";
 import Php from "../assets/home/php.png";
+import Bis2Bis from "../assets/home/bis2bis.png";
+import Webjump from "../assets/home/webjump.svg";
+import Edubrahub from "../assets/home/edubrahub.jpg";
 import Sass from "../assets/home/sass.svg";
 import Less from "../assets/home/less.svg";
 import Tailwindcss from "../assets/home/tailwindcss.svg";
@@ -25,6 +28,7 @@ import Netbeans from "../assets/home/netbeans.svg";
 import CorelDRAW from "../assets/home/coreldraw.svg";
 import MyCard from "../components/MyCard";
 import CardTooltip from "../components/CardTooltip";
+import MyCardExp from "../components/MyCardExp";
 
 function Home() {
   return (
@@ -177,7 +181,38 @@ function Home() {
       <div className="experience">
         <h2>Minhas experiências </h2>
 
-        <div className="infos"></div>
+        <div className="infos">
+          <MyCardExp
+            link="https://www.bis2bis.com.br/"
+            image={Bis2Bis}
+            title="Bis2Bis"
+            office="Desenvolvedor web front end"
+            period="abr de 2023 - abr de 2024"
+            modality="Remota"
+            classImg="bis2bis"
+          />
+          <MyCardExp
+            link="https://webjump.ai/"
+            title="Webjump"
+            image={Webjump}
+            office="Desenvolvedor web front end"
+            period="ago de 2022 - fev de 2023"
+            modality="Remota"
+            office2="Estágio Desenvolvedor web front end"
+            period2="mar de 2022 - ago de 2022"
+            modality2="Remota"
+            classImg="wbj"
+          />
+          <MyCardExp
+            link="https://www.linkedin.com/company/edubrahub/"
+            title="Edubrahub"
+            image={Edubrahub}
+            office="Estágio Desenvolvedor full stack"
+            period="out de 2021 - jan de 2022"
+            modality="Remota"
+            classImg="edu"
+          />
+        </div>
       </div>
     </div>
   );
