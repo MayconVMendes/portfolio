@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
 
-function CardProject({ image, title }) {
+function CardProject({ image, description, link }) {
   return (
     <div className="cardProject">
       <div className="first-content">
         <img src={image} />
-        <h2>{title}</h2>
       </div>
       <div className="second-content">
-        <span>Second</span>
+        <span>Clique para visitar</span>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <span className="description">{description}</span>
+        </a>
       </div>
     </div>
   );
@@ -16,7 +18,8 @@ function CardProject({ image, title }) {
 
 CardProject.propTypes = {
   image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default CardProject;
