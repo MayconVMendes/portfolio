@@ -7,8 +7,11 @@ import MG from "../assets/home/magento.png";
 import ND from "../assets/home/node.png";
 import Vue from "../assets/home/vue.png";
 import Php from "../assets/home/php.png";
+import Etec from "../assets/home/etec.png";
+import Fatec from "../assets/home/fatec.png";
 import Bis2Bis from "../assets/home/bis2bis.png";
 import Webjump from "../assets/home/webjump.svg";
+import Adobe from "../assets/home/adobeexpress.svg";
 import Edubrahub from "../assets/home/edubrahub.jpg";
 import Sass from "../assets/home/sass.svg";
 import Less from "../assets/home/less.svg";
@@ -97,7 +100,12 @@ function Home() {
             alt="Icone do Android Studio"
             tooltip="Android Studio"
           />
-          <CardTooltip image={Expo} alt="Icone do Expo" tooltip="Expo" />
+          <CardTooltip
+            image={Expo}
+            classImg="expo"
+            alt="Icone do Expo"
+            tooltip="Expo"
+          />
           <CardTooltip image={Figma} alt="Icone do Figma" tooltip="Figma" />
           <CardTooltip image={Canva} alt="Icone do Canva" tooltip="Canva" />
           <CardTooltip
@@ -110,6 +118,11 @@ function Home() {
             alt="Icone do CorelDRAW"
             classImg="corel"
             tooltip="CorelDRAW"
+          />
+          <CardTooltip
+            image={Adobe}
+            alt="Icone do Adobe Express"
+            tooltip="Adobe Express"
           />
         </div>
       </div>
@@ -163,6 +176,8 @@ function Home() {
         <div className="infos">
           <MyCard
             link="https://www.fatecpg.edu.br/"
+            image={Fatec}
+            classImg="fatec"
             title="Ensino Superior"
             name="Análise e Desenvolvimento de Sistemas"
             data="2020 - 2023 (3 anos)"
@@ -171,6 +186,8 @@ function Home() {
 
           <MyCard
             link="https://www.etecpg.com.br/"
+            image={Etec}
+            classImg="etec"
             title="Ensino Técnico"
             name="Análise e Desenvolvimento de Sistemas"
             data="2019 - 2020 (1 ano e 6 meses)"

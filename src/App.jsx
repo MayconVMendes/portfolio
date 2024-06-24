@@ -14,6 +14,7 @@ function App() {
     <div data-theme={theme} className="app-container">
       <ScrollToTop />
       <Header changeTheme={changeTheme} currentTheme={theme} />
+      <div className="bgOpacityHeader" />
       <main className="content">
         <Outlet />
       </main>
