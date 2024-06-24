@@ -22,19 +22,24 @@
 }
 
 [data-theme="dark"] {
-  --bg1: #020011;
-  --header: #0b0d0e;
+  --bg1: #161b22;
+  --header: #0d1117;
   --headerTxtColor: #ddd;
   --headerTxtColorTitle: #1d4eb0;
   --headerTxtColorHover: #1d4eb0;
   --header-shadowColor: rgba(255, 255, 255, 0.09);
-  --footer: #0b0d0e;
+  --footer: #0d111792;
   --h2: #ddd;
   --pColor: #696969;
   --brColor: #333;
   --btnBgHover: #012e88;
   --bgMenuMobile: #5081e2;
   --bgCardP: #b4dfff;
+
+  .expo {
+    background-color: #fff;
+    border-radius: 10px;
+  }
 }
 
 * {
@@ -57,7 +62,6 @@ p {
 }
 
 .content {
-  margin-top: 90px;
   padding-top: 20px;
 }
 
@@ -67,6 +71,11 @@ p {
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     padding: 0;
   }
+}
+
+.bgOpacityHeader {
+  height: 90px;
+  background-color: var(--header);
 }
 
 ::-webkit-scrollbar {

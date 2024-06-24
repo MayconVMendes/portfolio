@@ -17,6 +17,15 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
+
+    .fatec,
+    .etec {
+      width: 120px;
+    }
+
+    .etec {
+      margin-right: -10px;
+    }
     .bis2bis {
       width: 25px;
     }
