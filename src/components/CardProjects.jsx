@@ -4,13 +4,15 @@ function CardProject({ image, description, link }) {
   return (
     <div className="cardProject">
       <div className="first-content">
-        <img src={image} />
+        <img src={image} alt="Icone da loja" />
       </div>
       <div className="second-content">
-        <span>Clique para visitar</span>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <span className="description">{description}</span>
-        </a>
+        <div className="control">
+          <h2>Clique para visitar</h2>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <span className="description">{description}</span>
+          </a>
+        </div>
       </div>
     </div>
   );
