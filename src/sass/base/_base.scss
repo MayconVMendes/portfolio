@@ -19,6 +19,8 @@
   --btnBgHover: #012e88;
   --bgMenuMobile: #fbfbfe;
   --bgCardP: #e6f4ff;
+  --txtCardC: #000000e6;
+  --bgBtnCardC: #fff;
 }
 
 [data-theme="dark"] {
@@ -35,6 +37,9 @@
   --btnBgHover: #012e88;
   --bgMenuMobile: #5081e2;
   --bgCardP: #b4dfff;
+  --txtCardC: #ffffffe6;
+  --btnCardC: #fff;
+  --bgBtnCardC: #1d4eb0;
 
   .expo {
     background-color: #fff;

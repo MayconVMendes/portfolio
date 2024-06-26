@@ -27,7 +27,7 @@ function Header({ changeTheme, currentTheme }) {
               <Link to="/projetos">Projetos</Link>
             </li>
             <li>
-              <Link to="/">Cursos</Link>
+              <Link to="/curso">Cursos</Link>
             </li>
             <li>
               <Link to="/contato">Contato</Link>

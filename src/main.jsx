@@ -6,6 +6,7 @@ import Error from "./pages/Error.jsx";
 import Projects from "./pages/Projects.jsx";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
+import Course from "./pages/Course.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/contato",
         element: <Contact />,
+      },
+      {
+        path: "/curso",
+        element: <Course />,
       },
     ],
   },
