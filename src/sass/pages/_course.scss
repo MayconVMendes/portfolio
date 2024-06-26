@@ -36,6 +36,10 @@
   .course {
     .box {
       max-width: 740px;
+
+      .cou {
+        gap: 10px;
+      }
     }
   }
 }
@@ -44,6 +48,10 @@
   .course {
     .box {
       max-width: 960px;
+
+      .cou {
+        gap: 20px;
+      }
     }
   }
 }
@@ -52,6 +60,10 @@
   .course {
     .box {
       max-width: 1200px;
+
+      .cou {
+        gap: 15px;
+      }
     }
   }
 }

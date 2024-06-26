@@ -18,16 +18,18 @@ function CardCourse({
       <div className="second-content">
         <div className="titleIcon">
           <h2>{title}</h2>
-          {icon1 ? (
-            <img className="img1" src={icon1} alt="Logo do estudo" />
-          ) : (
-            ""
-          )}
-          {icon2 ? (
-            <img className="img2" src={icon2} alt="Logo do estudo" />
-          ) : (
-            ""
-          )}
+          <div className="icons">
+            {icon1 ? (
+              <img className="img1" src={icon1} alt="Logo do estudo" />
+            ) : (
+              ""
+            )}
+            {icon2 ? (
+              <img className="img2" src={icon2} alt="Logo do estudo" />
+            ) : (
+              ""
+            )}
+          </div>
         </div>
         <p className="ints">{institute}</p>
         <p>Verificação emitida em {verification}</p>
