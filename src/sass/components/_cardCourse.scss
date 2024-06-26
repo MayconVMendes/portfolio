@@ -10,9 +10,7 @@
   padding: 15px 11px;
   display: flex;
   transition: all 0.5s;
-  height: 210px;
   width: 100%;
-  max-width: 390px;
 
   &:hover {
     border: 1px solid var(--headerTxtColorTitle);
@@ -34,22 +32,23 @@
     width: 100%;
     .titleIcon {
       display: flex;
+      justify-content: space-between;
+
+      .icons {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+      }
       h2 {
         font-size: 16px;
         color: var(--txtCardC);
         font-weight: bold;
-        width: 245px;
+        margin-right: 6px;
       }
 
       img {
-        position: absolute;
         width: 43px;
-      }
-      .img1 {
-        right: -5px;
-      }
-      .img2 {
-        right: 35px;
+        height: 43px;
       }
     }
 
@@ -61,6 +60,7 @@
 
     .ints {
       font-weight: 600;
+      margin-top: 5px;
     }
 
     .btn {
@@ -88,8 +88,62 @@
   }
 }
 
+@include mobileview {
+  .cardCourse {
+    height: 220px;
+    max-width: 420px;
+    .first-content {
+      img {
+        width: 37px;
+        height: 37px;
+      }
+    }
+    .second-content {
+      .titleIcon {
+        h2 {
+          line-height: 20px;
+          font-size: 15px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+        }
+
+        img {
+          width: 37px;
+          height: 37px;
+        }
+      }
+
+      .ints {
+        font-size: 14px;
+      }
+
+      p {
+        line-height: 19px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@include tabletview {
+  .cardCourse {
+    height: 240px;
+    max-width: 365px;
+  }
+}
+
+@include notebookview {
+  .cardCourse {
+    height: 210px;
+    max-width: 470px;
+  }
+}
+
 @include desktopview {
   .cardCourse {
-    margin: 5px;
+    height: 220px;
+    max-width: 390px;
   }
 }
