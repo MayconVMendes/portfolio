@@ -24,18 +24,8 @@ import github from "../assets/course/github.svg";
 import photoshop from "../assets/course/photoshop.svg";
 import styledcomponents from "../assets/home/styledcomponents.svg";
 import CardCourse from "../components/CardCourse";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 function Course() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
   return (
     <div className="course">
       <div className="box">
@@ -48,7 +38,7 @@ function Course() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            cliando aqui
+            cliando aqui{" "}
           </a>
           ou se preferir, meu{" "}
           <a
@@ -56,7 +46,7 @@ function Course() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            certificado completo da alura
+            certificado completo da alura.
           </a>{" "}
         </p>
         <div className="cou">
