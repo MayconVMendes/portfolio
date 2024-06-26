@@ -401,7 +401,7 @@ function Course() {
             institute="Centro Paula Souza"
             verification="jun. de 2020"
             code="Fmi9rkrrhp"
-            certificate="/public/pdfs/designephotoshop.jpeg"
+            certificate="/public/pdfs/designephotoshop.pdf"
           />
           <CardCourse
             image={evolutime}
@@ -411,7 +411,7 @@ function Course() {
             institute="Evolutime"
             verification="fev. de 2016"
             code="Fmi9rkrrhp"
-            certificate="/public/pdfs/evolutime.jpeg"
+            certificate="/public/pdfs/evolutime.pdf"
           />
         </div>
       </div>
