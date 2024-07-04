@@ -21,9 +21,6 @@ function Header({ changeTheme, currentTheme }) {
               <Link to="/">Inicio</Link>
             </li>
             <li>
-              <Link to="/">Sobre</Link>
-            </li>
-            <li>
               <Link to="/projetos">Projetos</Link>
             </li>
             <li>

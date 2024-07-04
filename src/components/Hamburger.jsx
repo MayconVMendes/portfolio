@@ -31,9 +31,6 @@ function Hamburger({ currentTheme, changeTheme }) {
         <Link to="/" onClick={closeMenu}>
           Inicio
         </Link>
-        <Link to="/" onClick={closeMenu}>
-          Sobre
-        </Link>
         <Link to="/projetos" onClick={closeMenu}>
           Projetos
         </Link>
