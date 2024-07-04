@@ -120,8 +120,14 @@
     .boxImg {
       width: 40%;
       height: 450px;
-      display: block;
-      background-color: #fff;
+      display: flex;
+
+      img {
+        width: 470px;
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+      }
     }
     .boxInfo {
       width: 60%;
