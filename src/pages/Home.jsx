@@ -1,4 +1,5 @@
 import MyPhoto from "../assets/my.jpg";
+import Myformature from "../assets/myformature.jpeg";
 import { Link } from "react-router-dom";
 import JS from "../assets/home/js.png";
 import TS from "../assets/home/ts.png";
@@ -29,6 +30,8 @@ import Figma from "../assets/home/figma.svg";
 import Canva from "../assets/home/canva.svg";
 import Netbeans from "../assets/home/netbeans.svg";
 import CorelDRAW from "../assets/home/coreldraw.svg";
+import Bootstrap from "../assets/home/bootstrap.svg";
+import Chakraui from "../assets/home/chakraui.svg";
 import MyCard from "../components/MyCard";
 import CardTooltip from "../components/CardTooltip";
 import MyCardExp from "../components/MyCardExp";
@@ -57,7 +60,12 @@ function Home() {
           <p className="area">Desenvolvedor, design, analista e engenheiro</p>
           <div className="links">
             <Link to="/contato">Entrar em contato</Link>
-            <Link>Portifolio</Link>
+            <a
+              href="pdfs/CV_Maycon_Vieira_Mendes.pdf"
+              download="CV Maycon Vieira Mendes.pdf"
+            >
+              Currículo
+            </a>
           </div>
         </div>
       </div>
@@ -75,7 +83,9 @@ function Home() {
             Já atuei como Dev front-end, back-end e full stack.
           </p>
         </div>
-        <div className="boxImg"></div>
+        <div className="boxImg">
+          <img src={Myformature} alt="Minha foto" />
+        </div>
       </div>
       <div className="tools">
         <h2 className="who">Algumas ferramentas que eu utlizo</h2>
@@ -169,6 +179,16 @@ function Home() {
           <CardTooltip image={Java} alt="Icone do Java" tooltip="Java" />
           <CardTooltip image={Kotlin} alt="Icone do Kotlin" tooltip="Kotlin" />
           <CardTooltip image={Graph} alt="Icone do GraphQL" tooltip="GraphQL" />
+          <CardTooltip
+            image={Bootstrap}
+            alt="Icone do Bootstrap"
+            tooltip="Bootstrap"
+          />
+          <CardTooltip
+            image={Chakraui}
+            alt="Icone do Chakra UI"
+            tooltip="Chakra UI"
+          />
         </div>
       </div>
       <div className="formation">
