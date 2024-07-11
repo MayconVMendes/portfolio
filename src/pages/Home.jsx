@@ -200,7 +200,7 @@ function Home() {
             classImg="fatec"
             title="Ensino Superior"
             name="Análise e Desenvolvimento de Sistemas"
-            data="2020 - 2023 (3 anos)"
+            data="2021 - 2023 (3 anos)"
             institutes="Fatec de Praia Grande"
           />
 
