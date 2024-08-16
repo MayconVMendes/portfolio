@@ -148,7 +148,7 @@ function Course() {
             institute="Alura"
             verification="jun. de 2022"
             code="3708a6f1-e242-46ad-84e3-adc3914b0178"
-            certificate="https://cursos.alura.com.br/certificate/3708a6f1-e242-46ad-84e3-adc3914b0178"
+            certificate="https://cursos.alura.com.br/degree/certificate/3708a6f1-e242-46ad-84e3-adc3914b0178"
           />
           <CardCourse
             image={alura}
