@@ -61,7 +61,7 @@ function Home() {
           <div className="links">
             <Link to="/contato">Entrar em contato</Link>
             <a
-              href="pdfs/CV_Maycon_Vieira_Mendes.pdf"
+              href="pdfs/Dev-MayconVieiraMendes2024.pdf"
               download="CV Maycon Vieira Mendes.pdf"
             >
               Currículo
