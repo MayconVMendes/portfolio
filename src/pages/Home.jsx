@@ -39,6 +39,10 @@ import MyCardExp from "../components/MyCardExp";
 function Home() {
   return (
     <div className="welcome">
+      <div class="aviso">
+        Atenção! Um novo portfólio está sendo desenvolvido. O atual está
+        significativamente desatualizado.
+      </div>
       <div className="myPerson">
         <div className="animation">
           <div className="myPhoto">
