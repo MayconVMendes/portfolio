@@ -42,6 +42,8 @@ function Home() {
       <div class="aviso">
         Atenção! Um novo portfólio está sendo desenvolvido. O atual está
         significativamente desatualizado.
+
+        David 
       </div>
       <div className="myPerson">
         <div className="animation">
